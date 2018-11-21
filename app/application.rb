@@ -2,8 +2,8 @@ class Application
   def call(env)
     resp = Rack::Response.new
 
-    t = Time.now
-    hour = t.hour
+    time = Time.now
+    hour = time.hour
 
     if hour < 12
       resp.write "Morning"
